@@ -26,4 +26,7 @@ workflows:
   version: 2
   deploy_shared_fantasy_constants:
     jobs:
-      - publish
+      - install
+      - publish:
+          requires:
+            - install
