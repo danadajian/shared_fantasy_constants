@@ -4,7 +4,7 @@ container_config: &container_config
   docker:
     - image: node:11.10.1
 jobs:
-  test:
+  install:
     <<: *container_config
     steps:
       - checkout
@@ -19,6 +19,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/shared-fantasy-constants
+      - run:
+          name: Authenticate NPM
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish
           command: npm publish
