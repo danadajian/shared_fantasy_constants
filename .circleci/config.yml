@@ -31,5 +31,6 @@ workflows:
     jobs:
       - install
       - publish:
+          context: SHARED_FANTASY_CONSTANTS
           requires:
             - install
