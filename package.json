@@ -1,0 +1,24 @@
+{
+  "name": "shared_fantasy_constants",
+  "version": "1.0.0",
+  "description": "Shared constants for fantasy sports apps",
+  "main": "index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare" : "npm run build",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danadajian/shared_fantasy_constants.git"
+  },
+  "author": "Dan Adajian",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  },
+  "files": ["build/**/*"]
+}
