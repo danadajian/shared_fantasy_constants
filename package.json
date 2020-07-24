@@ -1,6 +1,6 @@
 {
-  "name": "shared_fantasy_constants",
-  "version": "1.0.1",
+  "name": "shared-fantasy-constants",
+  "version": "1.0.2",
   "description": "Shared constants for fantasy sports apps",
   "main": "lib/index.js",
   "types": "index.d.ts",
