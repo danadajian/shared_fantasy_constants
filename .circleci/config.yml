@@ -14,6 +14,17 @@ jobs:
       - persist_to_workspace:
           root: ~/shared-fantasy-constants
           paths: .
+  build:
+    <<: *container_config
+    steps:
+      - attach_workspace:
+          at: ~/shared-fantasy-constants
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/shared-fantasy-constants
+          paths: .
   publish:
     <<: *container_config
     steps:
@@ -30,7 +41,11 @@ workflows:
   deploy_shared_fantasy_constants:
     jobs:
       - install
+      - build:
+          requires:
+            - install
       - publish:
           context: SHARED_FANTASY_CONSTANTS
           requires:
             - install
+            - build
