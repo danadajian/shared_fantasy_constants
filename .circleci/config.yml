@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: NPM Publish
-          command: npm publish --access=public
+          command: npm publish
       - persist_to_workspace:
           root: ~/shared-fantasy-constants
           paths: .
