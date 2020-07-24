@@ -2,8 +2,8 @@
   "name": "shared_fantasy_constants",
   "version": "1.0.0",
   "description": "Shared constants for fantasy sports apps",
-  "main": "index.js",
-  "types": "build/index.d.ts",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,5 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.9.7"
-  },
-  "files": ["build/**/*"]
+  }
 }
