@@ -4,17 +4,24 @@ container_config: &container_config
   docker:
     - image: node:11.10.1
 jobs:
-  publish:
+  test:
     <<: *container_config
     steps:
       - checkout
       - run:
-          name: NPM Publish
-          command: npm publish
+          name: Install
+          command: npm install
       - persist_to_workspace:
           root: ~/shared-fantasy-constants
           paths: .
-
+  publish:
+    <<: *container_config
+    steps:
+      - attach_workspace:
+          at: ~/shared-fantasy-constants
+      - run:
+          name: Publish
+          command: npm publish
 workflows:
   version: 2
   deploy_shared_fantasy_constants:
