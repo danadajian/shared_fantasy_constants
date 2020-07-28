@@ -1,4 +1,5 @@
 export const SUPPORTED_SPORTS = ['mlb', 'nfl', 'nba', 'nhl'];
+export const SUPPORTED_WEATHER_SPORTS = ['mlb', 'nfl'];
 export const SUPPORTED_CONTESTS = ['Main', 'Thu', 'Sat', 'Sun', 'Opening Day'];
 export const LINEUP_RULES: any = {
     Fanduel: {
