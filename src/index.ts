@@ -45,6 +45,8 @@ export const invokeLambdaFunction = async (functionName: any, payload: any = {})
 export const SUPPORTED_SPORTS = ['mlb', 'nfl', 'nba', 'nhl'];
 export const SUPPORTED_WEATHER_SPORTS = ['mlb', 'nfl'];
 export const SUPPORTED_CONTESTS = ['Main', 'Thu', 'Sat', 'Sun', 'Opening Day'];
+export const DFS_PIPELINE_BUCKET_NAME = 'dfs-pipeline';
+export const FANTASY_ANALYTICS_BUCKET_NAME = 'fantasy-analytics';
 export const LINEUP_RULES: any = {
     Fanduel: {
         mlb: {
