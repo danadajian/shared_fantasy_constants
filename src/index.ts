@@ -33,12 +33,12 @@ export const createCloudWatchEvent = async (putRuleParams: any, putTargetsParams
     ]);
 };
 
-export const invokeLambdaFunction = async (functionName: any, payload: any = {}): Promise<any> => {
+export const invokeLambdaFunction = async (functionName: string, payload: any = {}): Promise<any> => {
     const params = {
         FunctionName: functionName,
         Payload: JSON.stringify(payload)
     };
-    const response: any = await Lambda.invoke(params).promise();
+    const response = await Lambda.invoke(params).promise();
     return JSON.parse(response.Payload.toString());
 };
 
