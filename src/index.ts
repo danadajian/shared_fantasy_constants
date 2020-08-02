@@ -1,6 +1,7 @@
 import {CloudWatchEvents, Lambda, S3, SNS} from "./aws";
 
 export const retrieveObjectFromS3 = async (bucketName: string, fileName: string): Promise<any> => {
+    console.log(`key: ${process.env.AWS_KEY}, ${process.env.AWS_SECRET}`);
     const params = {
         Bucket: bucketName,
         Key: fileName
