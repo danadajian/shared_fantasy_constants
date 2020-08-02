@@ -11,6 +11,11 @@ jobs:
       - run:
           name: Install
           command: npm install
+      - run:
+          name: Prepare Environment Variables
+          command: |
+            chmod +x ./scripts/createEnvironmentVariables.sh
+            ./scripts/createEnvironmentVariables.sh
       - persist_to_workspace:
           root: ~/shared-fantasy-constants
           paths: .
