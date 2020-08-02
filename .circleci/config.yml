@@ -53,7 +53,8 @@ workflows:
   version: 2
   deploy_shared_fantasy_constants:
     jobs:
-      - install
+      - install:
+          context: SHARED_FANTASY_CONSTANTS
       - build:
           requires:
             - install
