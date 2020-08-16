@@ -16,14 +16,15 @@ export type FantasyData = {
 }
 
 export type RecentFantasyData = {
-    date: string,
+    date?: string,
+    week?: number,
     fantasyData: FantasyData[],
     avgPositionPercentile: number,
     avgOverallPercentile: number,
     positions: string[]
 }
 
-export interface StartTime {
+export type StartTime = {
     sport: string,
     date: string
 }
