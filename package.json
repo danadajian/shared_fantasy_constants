@@ -1,6 +1,6 @@
 {
   "name": "@dadajian/shared-fantasy-constants",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Shared constants for fantasy sports apps",
   "main": "lib/constants.js",
   "types": "types.d.ts",
