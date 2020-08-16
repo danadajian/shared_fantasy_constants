@@ -19,9 +19,9 @@ export type RecentFantasyData = {
     date?: string,
     week?: number,
     fantasyData: FantasyData[],
-    avgPositionPercentile: number,
-    avgOverallPercentile: number,
-    positions: string[]
+    avgPositionPercentile?: number,
+    avgOverallPercentile?: number,
+    positions?: string[]
 }
 
 export type StartTime = {
