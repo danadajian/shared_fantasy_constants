@@ -1,8 +1,14 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "outDir": "./lib"
+    "outDir": "lib"
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "declaration": true,
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ]
 }
